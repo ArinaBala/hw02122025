@@ -1,165 +1,140 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>First task</title>
-<style>
-  :root{
-    --page-bg: #bfe2f3;
-    --thumb-bg: #bbb;
-    --card-bg: #ffffff;
-    --gap: 16px;
-    --container-width: 920px;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamWear</title>
 
-  body{
-    margin: 0;
-    padding: 30px 0;
-    background: var(--page-bg);
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    display: flex;
-    justify-content: center;
-  }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  .wrap{
-    width: var(--container-width);
-    background: rgba(255,255,255,0.06);
-    padding: 26px;
-    box-sizing: border-box;
-  }
-  .grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
-    align-items: start; 
-  }
+    <style>
+        body {
+            background: #f4f1ed;
+            color: #3c3630;
+        }
+        .navbar {
+            background: #e7e1dc;
+        }
+        .banner {
+            background: #d9d2cc;
+            padding: 90px 20px;
+            text-align: center;
+        }
+        .banner h1 {
+            font-size: 42px;
+            font-weight: bold;
+        }
+        .category-card img,
+        .product-card img {
+            border-radius: 10px;
+        }
+        footer {
+            background: #e7e1dc;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
 
-  
-  .card{
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    overflow: hidden; 
-    box-shadow: 0 2px 0 rgba(0,0,0,0.04);
-    background: transparent;
-  }
-
-  .card .thumb{
-    background: var(--thumb-bg);
-    color: #666;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-  }
-
-
-  .card .body{
-    background: var(--card-bg);
-    padding: 12px;
-    box-sizing: border-box;
-    line-height: 1.35;
-  }
-
-  .card .body h4{
-    margin: 0 0 6px 0;
-    font-size: 15px;
-  }
-
-  .card .body p{
-    margin: 0;
-    font-size: 13px;
-    color: #444;
-  }
-
-  
-</style>
+        
+        @media (max-width: 576px) {
+            .banner {
+                padding: 50px 10px;
+            }
+            .banner h1 {
+                font-size: 28px;
+            }
+            .category-card img,
+            .product-card img {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="wrap">
-  <div class="grid">
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-4" href="index.html">DreamWear</a>
 
-    
-    <div class="card">
-      <div class="thumb" style="height:150px;">350 x 150</div>
-      <div class="body">
-        <h4>Title</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis purus sed ipsum rhoncus.</p>
-      </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item px-2"><a class="nav-link" href="#">Главная</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#">Верх</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#">Низ</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#">Обувь</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#">Избранное</a></li>
+        <li class="nav-item px-2"><a class="nav-link" href="#">Регистрация</a></li>
+      </ul>
     </div>
-
-    <div class="card">
-      <div class="thumb" style="height:100px;">350 x 100</div>
-      <div class="body">
-        <p>Aliquam ornare nulla a velit vehicula, sed dignissim nunc pharetra.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb" style="height:100px;">350 x 100</div>
-      <div class="body">
-        <h4>A little longer title</h4>
-        <p>Aenean accumsan turpis gravida feugiat molestie. Aliquam ornare nulla a velit vehicula.</p>
-      </div>
-    </div>
-
-   
-    <div class="card">
-      <div class="thumb" style="height:220px;">350 x 220</div>
-      <div class="body">
-        <p>Aenean feugiat dui et libero consectetur hendrerit.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb" style="height:230px;">350 x 230</div>
-      <div class="body">
-        <h4>The title</h4>
-        <p>In ultrices lorem id consectetur tempus. Mauris tristique enim in hendrerit dapibus.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb" style="height:150px;">350 x 350</div>
-      <div class="body">
-        <h4>A title</h4>
-        <p>Nulla ut justo iaculis, faucibus tortor non, blandit tortor.</p>
-      </div>
-    </div>
-
-    
-    <div class="card">
-      <div class="thumb" style="height:350px;">350 x 100</div>
-      <div class="body">
-        <h4>Title</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis purus sed ipsum rhoncus.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis purus sed ipsum rhoncus
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb" style="height:150px;">350 x 150</div>
-      <div class="body">
-        
-        <p>Vivamus ac tortor vel quam viverra tristique. Curabitur suscipit est non mattis volutpat.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="thumb" style="height:100px;">350 x 150</div>
-      <div class="body">
-        
-        <p>Mauris nec purus nec ligula euismod convallis.</p>
-      </div>
-    </div>
-
   </div>
+</nav>
+
+<section class="banner">
+    <h1>Комфорт. Стиль. Простота.</h1>
+    <p class="mt-2">Модная одежда в минималистичном стиле</p>
+</section>
+
+<div class="container text-center mt-5">
+    <h2 class="mb-4">Популярные категории</h2>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+            <img src="hoodie.jpg" class="img-fluid category-card">
+            <p class="mt-2 fs-5">Верх</p>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+            <img src="pants.jpg" class="img-fluid category-card">
+            <p class="mt-2 fs-5">Низ</p>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+            <img src="shoes.jpg" class="img-fluid category-card">
+            <p class="mt-2 fs-5">Обувь</p>
+        </div>
+    </div>
 </div>
 
+<div class="container text-center mt-5">
+    <h2 class="mb-4">Популярные товары</h2>
+
+    <div class="row g-4 justify-content-center">
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card p-2">
+                <img src="oversize.jpg" class="card-img-top">
+                <p class="mt-2">Oversize худи</p>
+                <span class="fw-bold">899 ₴</span>
+            </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card p-2">
+                <img src="softpants.jpg" class="card-img-top">
+                <p class="mt-2">Мягкие штаны</p>
+                <span class="fw-bold">799 ₴</span>
+            </div>
+        </div>
+
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+            <div class="card product-card p-2">
+                <img src="whiteshoes.jpg" class="card-img-top">
+                <p class="mt-2">Белые кеды</p>
+                <span class="fw-bold">1199 ₴</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="mt-5">
+    <p>DreamWear © 2025</p>
+    <p>Тел: +380 99 111 22 33 · Email: info@dreamwear.com</p>
+    <p>Instagram · Facebook</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
