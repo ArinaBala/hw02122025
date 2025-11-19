@@ -1,140 +1,109 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DreamWear</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            background: #f4f1ed;
-            color: #3c3630;
-        }
-        .navbar {
-            background: #e7e1dc;
-        }
-        .banner {
-            background: #d9d2cc;
-            padding: 90px 20px;
-            text-align: center;
-        }
-        .banner h1 {
-            font-size: 42px;
-            font-weight: bold;
-        }
-        .category-card img,
-        .product-card img {
-            border-radius: 10px;
-        }
-        footer {
-            background: #e7e1dc;
-            padding: 20px;
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        
-        @media (max-width: 576px) {
-            .banner {
-                padding: 50px 10px;
-            }
-            .banner h1 {
-                font-size: 28px;
-            }
-            .category-card img,
-            .product-card img {
-                width: 100%;
-            }
-        }
-    </style>
+    <title>1</title>
 </head>
 <body>
+   
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand fw-bold fs-4" href="index.html">DreamWear</a>
+    <script>
+<h2> 1 </h2>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        function min(a,b){
+            if(a < b){
+                return a;
+            }
+            else{
+                return b;
+            }
+        }
 
-    <div class="collapse navbar-collapse" id="menu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item px-2"><a class="nav-link" href="#">Главная</a></li>
-        <li class="nav-item px-2"><a class="nav-link" href="#">Верх</a></li>
-        <li class="nav-item px-2"><a class="nav-link" href="#">Низ</a></li>
-        <li class="nav-item px-2"><a class="nav-link" href="#">Обувь</a></li>
-        <li class="nav-item px-2"><a class="nav-link" href="#">Избранное</a></li>
-        <li class="nav-item px-2"><a class="nav-link" href="#">Регистрация</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<h2> 2 </h2>
 
-<section class="banner">
-    <h1>Комфорт. Стиль. Простота.</h1>
-    <p class="mt-2">Модная одежда в минималистичном стиле</p>
-</section>
+        function pow(num, degree){
+            let result = 1;
+            for(let i = 0; i < degree; i++){
+            result = result * num;
+            }
+             return result;
+        }
 
-<div class="container text-center mt-5">
-    <h2 class="mb-4">Популярные категории</h2>
+        <h2> 3 </h2>
 
-    <div class="row g-4 justify-content-center">
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
-            <img src="hoodie.jpg" class="img-fluid category-card">
-            <p class="mt-2 fs-5">Верх</p>
-        </div>
+        function calc(a, b, sign){
+            if (sign === "+"){
+                return a + b;
+            }
+            if (sign === "-"){
+                return a - b;
+            }
+            if (sign === "*"){
+                return a * b;
+            }
+            if (sign === "/"){
+                if (b === 0){
+                    return "Error: divide by zero"
+                }
+                return a / b;
+            }
+            return "Unknown operation...";
+        }
 
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
-            <img src="pants.jpg" class="img-fluid category-card">
-            <p class="mt-2 fs-5">Низ</p>
-        </div>
+        <h2> 4 </h2>
 
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
-            <img src="shoes.jpg" class="img-fluid category-card">
-            <p class="mt-2 fs-5">Обувь</p>
-        </div>
-    </div>
-</div>
+        function isPrime(n){
+            if (n <= 1){
+                return false;
+            }
+            for(let i = 2; i <= Math.sqrt(n); i++){
+                if (n % i === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
 
-<div class="container text-center mt-5">
-    <h2 class="mb-4">Популярные товары</h2>
+<h2> 5 </h2>
 
-    <div class="row g-4 justify-content-center">
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
-            <div class="card product-card p-2">
-                <img src="oversize.jpg" class="card-img-top">
-                <p class="mt-2">Oversize худи</p>
-                <span class="fw-bold">899 ₴</span>
-            </div>
-        </div>
+        function multiplicationTable(n){
+            for(let i = 1; i <= 10; i++){
+                console.log(n + " * " + i + " = " + (n * i));
+            }
+        }
+       for(let i = 1; i <= 9; i++){
+        multiplicationTable(i);
+       }
 
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
-            <div class="card product-card p-2">
-                <img src="softpants.jpg" class="card-img-top">
-                <p class="mt-2">Мягкие штаны</p>
-                <span class="fw-bold">799 ₴</span>
-            </div>
-        </div>
+<h2> 6 </h2>
 
-        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
-            <div class="card product-card p-2">
-                <img src="whiteshoes.jpg" class="card-img-top">
-                <p class="mt-2">Белые кеды</p>
-                <span class="fw-bold">1199 ₴</span>
-            </div>
-        </div>
-    </div>
-</div>
+function mod(a, b){
+    let div= Math.Floor (a / b);
+    let rest = a - div * b;
+    return rest;
+}
 
-<footer class="mt-5">
-    <p>DreamWear © 2025</p>
-    <p>Тел: +380 99 111 22 33 · Email: info@dreamwear.com</p>
-    <p>Instagram · Facebook</p>
-</footer>
+<h2> 7 </h2>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+function squares(){
+    for(let i = 1; i <= 5; i++){
+        console.log(i*i);
+    }
+}
+
+<h2> 8 </h2>
+
+function maxFromOneToFive(){
+    let max = 1;
+    for (let i = 2; i <= 5; i++) { 
+    if (i > max) { 
+      max = i; 
+    } 
+  } 
+  return max;
+}
+
+    </script>
 </body>
 </html>
