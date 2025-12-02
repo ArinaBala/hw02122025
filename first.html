@@ -4,106 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: rgb(240, 236, 236);
+            border-color: cornflowerblue;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-   
 
-    <script>
-<h2> 1 </h2>
+    <img src="images/5.gif" name="picture" id="picture" />
 
-        function min(a,b){
-            if(a < b){
-                return a;
-            }
-            else{
-                return b;
-            }
+    <div>
+        <button id="prevBtn"><- Prev</button>
+        <button id="nextBtn">Next -></button>
+    </div>
+
+    <script type="text/javascript">
+        let locations = ["images/1.gif", "images/2.gif", "images/3.gif", "images/4.gif"];
+        let currentImage = 0;
+
+        function nextImage() {
+            currentImage++;
+            if (currentImage == locations.length) 
+            currentImage = 0;
+            document.images["picture"].src = locations[currentImage];
         }
 
-<h2> 2 </h2>
-
-        function pow(num, degree){
-            let result = 1;
-            for(let i = 0; i < degree; i++){
-            result = result * num;
-            }
-             return result;
+        function prevImage() {
+            currentImage--;
+            if (currentImage < 0) 
+            currentImage = locations.length - 1;
+            document.images["picture"].src = locations[currentImage];
         }
 
-        <h2> 3 </h2>
-
-        function calc(a, b, sign){
-            if (sign === "+"){
-                return a + b;
-            }
-            if (sign === "-"){
-                return a - b;
-            }
-            if (sign === "*"){
-                return a * b;
-            }
-            if (sign === "/"){
-                if (b === 0){
-                    return "Error: divide by zero"
-                }
-                return a / b;
-            }
-            return "Unknown operation...";
-        }
-
-        <h2> 4 </h2>
-
-        function isPrime(n){
-            if (n <= 1){
-                return false;
-            }
-            for(let i = 2; i <= Math.sqrt(n); i++){
-                if (n % i === 0){
-                    return false;
-                }
-            }
-            return true;
-        }
-
-<h2> 5 </h2>
-
-        function multiplicationTable(n){
-            for(let i = 1; i <= 10; i++){
-                console.log(n + " * " + i + " = " + (n * i));
-            }
-        }
-       for(let i = 1; i <= 9; i++){
-        multiplicationTable(i);
-       }
-
-<h2> 6 </h2>
-
-function mod(a, b){
-    let div= Math.Floor (a / b);
-    let rest = a - div * b;
-    return rest;
-}
-
-<h2> 7 </h2>
-
-function squares(){
-    for(let i = 1; i <= 5; i++){
-        console.log(i*i);
-    }
-}
-
-<h2> 8 </h2>
-
-function maxFromOneToFive(){
-    let max = 1;
-    for (let i = 2; i <= 5; i++) { 
-    if (i > max) { 
-      max = i; 
-    } 
-  } 
-  return max;
-}
-
+        
+        document.getElementById("nextBtn").addEventListener("click", nextImage);
+        document.getElementById("prevBtn").addEventListener("click", prevImage);
     </script>
+
 </body>
 </html>
+
